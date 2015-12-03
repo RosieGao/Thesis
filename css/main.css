@@ -1,0 +1,45 @@
+.pageWrapper{
+	width: 100%;
+	margin-left: 0px; 
+	margin-top: 10px; 
+	padding: 10px 15px 0px; 
+	position: relative; 
+	word-wrap: break-word;
+}
+
+.canvasSize{
+	margin-left: 15px; 
+}
+
+.wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.sideWrapper{
+	position: absolute;
+    width: 200px;
+    height: 100%;
+}
+
+.navbar-side{
+	height: 100%;
+	overflow: auto;
+}
+
+.contentWrapper{
+	margin-left: 200px;
+	position: relative;
+    height: 100%;
+}
+
+.content{
+    margin-left: 10px;
+    margin-top: 0px;
+    padding: 30px 15px 15px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative;
+    height: 100%;
+}
