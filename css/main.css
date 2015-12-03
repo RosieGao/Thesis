@@ -12,15 +12,18 @@
 }
 
 .wrapper{
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100%;
 }
 
 .sideWrapper{
 	position: absolute;
-    width: 200px;
+    width: 260px;
     height: 100%;
+}
+
+.sideWrapper nav ul li a span{
+	font-weight: bold;
 }
 
 .navbar-side{
@@ -29,9 +32,8 @@
 }
 
 .contentWrapper{
-	margin-left: 200px;
+	margin-left: 260px;
 	position: relative;
-    height: 100%;
 }
 
 .content{
@@ -41,5 +43,37 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     position: relative;
-    height: 100%;
+}
+
+#components{
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#components li{
+	width: 120px;
+	font-size: 13px;
+    text-align: center;
+	background-repeat: no-repeat;
+	padding: 10px 20px 10px;
+	opacity: 0.85;
+	float: left;
+	overflow: hidden;
+}
+
+#components li.ui-draggable{
+	cursor: pointer;
+}
+
+#components li a{
+	text-decoration: none;
+}
+
+#animation li{
+	font-size: 13px;
+}
+
+#animation li a{
+	text-decoration: none;
 }
