@@ -6,36 +6,29 @@
 	position: relative; 
 	word-wrap: break-word;
 }
-
 .canvasSize{
 	margin-left: 15px; 
 }
-
 .wrapper{
     position: relative;
     width: 100%;
 }
-
 .sideWrapper{
 	position: absolute;
     width: 260px;
     height: 100%;
 }
-
 .sideWrapper nav ul li a span{
 	font-weight: bold;
 }
-
 .navbar-side{
 	height: 100%;
 	overflow: auto;
 }
-
 .contentWrapper{
 	margin-left: 260px;
 	position: relative;
 }
-
 .content{
     margin-left: 10px;
     margin-top: 0px;
@@ -44,15 +37,14 @@
     border-radius: 4px;
     position: relative;
 }
-
-#components{
+#gridSystem{
 	margin: 0;
     padding: 0;
     overflow: hidden;
 }
-
-#components li{
+#gridSystem li{
 	width: 120px;
+	height: 120px;
 	font-size: 13px;
     text-align: center;
 	background-repeat: no-repeat;
@@ -61,19 +53,45 @@
 	float: left;
 	overflow: hidden;
 }
-
+#gridSystem li.ui-draggable{
+	cursor: pointer;
+}
+#gridSystem li a{
+	text-decoration: none;
+}
+#gridSystem li img{
+	height: 65px;
+	width: 65px;
+}
+#components{
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#components li{
+	width: 120px;
+	height: 120px;
+	font-size: 13px;
+    text-align: center;
+	background-repeat: no-repeat;
+	padding: 10px 20px 10px;
+	opacity: 0.85;
+	float: left;
+	overflow: hidden;
+}
 #components li.ui-draggable{
 	cursor: pointer;
 }
-
 #components li a{
 	text-decoration: none;
 }
-
+#components li img{
+	height: 65px;
+	width: 65px;
+}
 #animation li{
 	font-size: 13px;
 }
-
 #animation li a{
 	text-decoration: none;
 }
