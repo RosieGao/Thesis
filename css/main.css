@@ -9,9 +9,22 @@
 .canvasSize{
 	margin-left: 15px; 
 }
+.lgSize{
+	width: 1170px;
+}
+.mdSize{
+	width: 970px;
+}
+.smSize{
+	width: 750px;
+}
+.xsSize{
+	width: 500px;
+}
 .wrapper{
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 .sideWrapper{
 	position: absolute;
@@ -36,6 +49,7 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     position: relative;
+    overflow: auto;
 }
 #gridSystem{
 	margin: 0;
