@@ -39,6 +39,19 @@ $(document).ready(function() {
 			});
 		}
 	});
+	$("#components .ui-draggable").draggable({
+		connectToSortable: ".column",
+		helper: "clone",
+		scroll: false,
+		start: function(event, ui) {
+		},
+		drag: function(event, ui) {
+			ui.helper.width("100%")
+		},
+		stop: function(event, ui) {
+			ui.helper.removeAttr("style");
+		}
+	});
 	$("#clear").on("click", function(e){
 		e.preventDefault();
 		clearContent();
