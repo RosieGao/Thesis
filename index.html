@@ -63,7 +63,8 @@
 	               </a>
 	               <ul class="collapse in" id="gridSystem">
 							<div class="ui-draggable">
-								<a href="#close" class="remove"><i class="fa fa-times fa-2x"></i></a>
+								<a href="#close" class="remove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="draglabel"><i class="fa fa-arrows"></i></a>
 								<div class="preview">
 									<img src="images/onecolumn.png"></img>								
 									<a href="#">One Column</a>
@@ -147,17 +148,18 @@
 	               </a>
 	               <ul class="collapse" id="components">
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
+								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
 								<div class="preview">
 									<i class="fa fa-header fa-5x"></i>								
-									<a href="#">Lables</a>
+									<a href="#">Headings</a>
 								</div>
 								<div class="view">
-									
+									<h3 contenteditable="true">h3. Bootstrap heading <small contenteditable="true">Secondary text</small></h3>
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-paragraph fa-5x"></i>
 									<a href="#">Paragraphs</a>
@@ -167,7 +169,7 @@
 								</div>
 							</div>
 	               	<div class="ui-draggable">
-	               		<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+	               		<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-table fa-5x"></i>
 									<a href="#">Tables</a>
@@ -177,7 +179,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/form.png"></img>
 									<a href="#">Forms</a>
@@ -187,7 +189,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/formgroup.png"></img>
 									<a href="#">Form Groups</a>
@@ -197,7 +199,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/textarea.png"></img>
 									<a href="#">Text Areas</a>
@@ -207,7 +209,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/selectinput.png"></img>
 									<a href="#">Selects</a>
@@ -217,7 +219,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/choosefiles.png"></img>
 									<a href="#">Choose Files</a>
@@ -227,7 +229,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-search fa-5x"></i>
 									<a href="#">Search</a>
@@ -237,7 +239,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/button.png"></img>
 									<a href="#">Buttons</a>
@@ -247,7 +249,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-check-square-o fa-5x"></i>
 									<a href="#">Checkboxs</a>
@@ -257,7 +259,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-dot-circle-o fa-5x"></i>
 									<a href="#">Radio Buttons</a>
@@ -267,7 +269,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-picture-o fa-5x"></i>
 									<a href="#">Images</a>
@@ -277,7 +279,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/buttondropdowns.png"></img>								
 									<a href="#">Dropdowns</a>
@@ -287,7 +289,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/nav.png"></img>								
 									<a href="#">Navs</a>
@@ -297,7 +299,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">								
 									<img src="images/navbar.png"></img>	
 									<a href="#">Navbar</a>
@@ -307,7 +309,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">	
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/thumbnails.png"></img>								
 									<a href="#">Thumbnails</a>
@@ -317,7 +319,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">		
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">						
 									<i class="fa fa-exclamation-triangle fa-5x"></i>
 									<a href="#">Alerts</a>
@@ -327,7 +329,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-tasks fa-5x"></i>								
 									<a href="#">Progress Bars</a>
@@ -337,7 +339,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">	
 								<img src="images/mediaobject.png"></img>								
 								<a href="#">Media object</a>
@@ -347,7 +349,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-list fa-5x"></i>								
 									<a href="#">List group</a>
@@ -357,7 +359,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/panel.png"></img>									
 									<a href="#">Panels</a>
@@ -367,7 +369,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<i class="fa fa-youtube-play fa-5x"></i>								
 									<a href="#">Responsive Embed</a>
@@ -377,7 +379,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">	
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">	
 									<img src="images/wait.png"></img>						
 									<a href="#">Pagination</a>
@@ -387,7 +389,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/wait.png"></img>						
 									<a href="#">Button Groups</a>
@@ -397,7 +399,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">		
 									<img src="images/wait.png"></img>					
 									<a href="#">Breadcrumbs</a>
@@ -407,7 +409,7 @@
 								</div>
 							</div>
 							<div class="ui-draggable">	
-								<a href="#close" class="smallremove"><i class="fa fa-times"></i></a>
+								<a href="#close" class="innerremove"><i class="fa fa-times"></i></a>
 								<div class="preview">
 									<img src="images/wait.png"></img>							
 									<a href="#">Jumbotron</a>

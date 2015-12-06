@@ -10,9 +10,21 @@ $(document).ready(function() {
 	$(".mdButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("mdSize")});
 	$(".smButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("smSize")});
 	$(".xsButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("xsSize")});
-	$(".content, .content .column").sortable({
+	$("#components .ui-draggable").draggable().bind('click', function(){
+ 		 $(this).focus();
+	})
+	$("#clear").on("click", function(e){
+		e.preventDefault();
+		clearContent();
+	})
+	$(".content").on("click", ".remove, .smallremove", function(e) {
+		e.preventDefault();
+		$(this).parent().remove();
+	})
+	$(".content, .column").sortable({
 		connectWith: ".column",
 		opacity: 0.5,
+		handle: ".innerdraglabel, .draglabel",
 		start: function(event, ui) {
 		},
 		stop: function(event, ui) {
@@ -32,6 +44,7 @@ $(document).ready(function() {
 			$(".content .column").sortable({
 				opacity: 0.5,
 				connectWith: ".column",
+				handle: ".innerdraglabel, .draglabel",
 				start: function(event, ui) {
 				},
 				stop: function(event, ui) {
@@ -52,8 +65,4 @@ $(document).ready(function() {
 			ui.helper.removeAttr("style");
 		}
 	});
-	$("#clear").on("click", function(e){
-		e.preventDefault();
-		clearContent();
-	})
 })

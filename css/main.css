@@ -75,6 +75,9 @@
 #gridSystem .remove{ 
 	display: none;
 }
+#gridSystem .draglabel{
+	display: none;
+} 
 #components{
 	margin: 0;
     padding: 0;
@@ -105,7 +108,10 @@
 #components .view{ 
 	display: none;
 }
-#components .remove{ 
+#components .innerremove{ 
+	display: none;
+}
+#components .innerdraglabel{ 
 	display: none;
 }
 #animation div{
@@ -166,7 +172,7 @@
 	border-radius: 4px 4px 4px 4px;
 	margin: 15px 0 8px;
 	position: relative;
-	padding: 20px 10px 0;
+	padding: 25px 10px 0;
 }
 .column .preview{
 	display: none;
@@ -184,16 +190,32 @@
     position: absolute;
     top: -1px;
 }
+.content .column .view{
+	padding-top: 10px;
+}
 .remove{ 
 	position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 7px;
+    right: 10px;
     z-index: 1;
 }
-.smallremove{ 
+.draglabel{
 	position: absolute;
-    right: -8px;
+    top: 7px;
+    right: 30px;
     z-index: 1;
+}
+.innerremove{ 
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    cursor: pointer;
+}
+.innerdraglabel{
+	position: absolute;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
 }
 .ui-draggable{
 	position: relative;
