@@ -1,7 +1,6 @@
 function clearContent(){
 	$(".content").empty();
 }
-
 $(document).ready(function() {
 	$(".sideWrapper").css("height", ((($(window).height() - 95) / $(window).height()) * 100) + "%");
 	$(".content").css("min-height", $(window).height() - 95);
@@ -17,9 +16,18 @@ $(document).ready(function() {
 		e.preventDefault();
 		clearContent();
 	})
-	$(".content").on("click", ".remove, .smallremove", function(e) {
+	$(".content").on("click", ".remove, .innerremove", function(e){
 		e.preventDefault();
 		$(this).parent().remove();
+	})
+	$(".content").on("click", "#stripedrows", function(e){
+		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-striped");
+	})
+	$(".content").on("click", "#borderedtables", function(e){
+		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-bordered");
+	})
+	$(".content").on("click", "#hoverrows", function(e){
+		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-hover");
 	})
 	$(".content, .column").sortable({
 		connectWith: ".column",

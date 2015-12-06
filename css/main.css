@@ -114,6 +114,9 @@
 #components .innerdraglabel{ 
 	display: none;
 }
+#components .properties{
+	display: none;
+}
 #animation div{
 	font-size: 13px;
 }
@@ -177,6 +180,9 @@
 .column .preview{
 	display: none;
 }
+.column .compbox .view{
+    padding-top: 30px;
+}
 .column::before{ 
     background-color: #F5F5F5;
     border: 1px solid #DDDDDD;
@@ -189,9 +195,6 @@
     padding: 1px 5px;
     position: absolute;
     top: -1px;
-}
-.content .column .view{
-	padding-top: 10px;
 }
 .remove{ 
 	position: absolute;
@@ -207,15 +210,23 @@
 }
 .innerremove{ 
     position: absolute;
+    top: 0px;
     right: 0px;
     z-index: 1;
     cursor: pointer;
 }
 .innerdraglabel{
 	position: absolute;
+	top: 0px;
     right: 20px;
     z-index: 1;
     cursor: pointer;
+}
+.content .column .properties{
+	position: absolute;
+    top: 0px;
+    right: 45px;
+    z-index: 1;
 }
 .ui-draggable{
 	position: relative;
