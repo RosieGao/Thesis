@@ -172,16 +172,16 @@
 									<a href="#">Paragraphs</a>
 								</div>
 								<div class="view">
-									<p>Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. </p>
+									<p contenteditable="true">Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. Bootstrap paragraphs. </p>
 								</div>
 							</div>
 	               	<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
 								<span class="properties">
-									<button class="btn btn-default" id="stripedrows" type="submit">Striped rows</button>
-									<button class="btn btn-default" id="borderedtables" type="submit">Bordered tables</button>
-									<button class="btn btn-default" id="hoverrows" type="submit">Hover rows</button>
+									<button class="btn btn-default btn-xs" id="stripedrows" type="submit">Striped rows</button>
+									<button class="btn btn-default btn-xs" id="borderedtables" type="submit">Bordered tables</button>
+									<button class="btn btn-default btn-xs" id="hoverrows" type="submit">Hover rows</button>
 								</span>
 								<div class="preview">
 									<i class="fa fa-table fa-5x"></i>
@@ -224,12 +224,57 @@
 							<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<button class="btn btn-default btn-xs" id="inlineform" type="submit">Inline form</button>
+									<button class="btn btn-default btn-xs" id="horizontalform" type="submit">Horizontal form</button>
+								</span>
 								<div class="preview">
 									<img src="images/form.png"></img>
 									<a href="#">Forms</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<form id="formview1">
+										<div class="form-group">
+											<label for="exampleInputEmail1" contenteditable="true">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1" contenteditable="true">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+										</div>
+										<div class="checkbox">
+											<label contenteditable="true">
+											<input type="checkbox"> Check me out
+											</label>
+										</div>
+										<button type="submit" class="btn btn-default" contenteditable="true">Submit</button>
+									</form>
+									<form class="form-horizontal" id="formview2"> 
+										<div class="form-group"> 
+											<label for="inputEmail3" class="col-sm-2 control-label" contenteditable="true">Email</label> 
+											<div class="col-sm-10"> 
+												<input type="email" class="form-control" id="inputEmail3" placeholder="Email"> 
+											</div> 
+										</div> 
+										<div class="form-group"> 
+											<label for="inputPassword3" class="col-sm-2 control-label" contenteditable="true">Password</label> 
+											<div class="col-sm-10"> 
+												<input type="password" class="form-control" id="inputPassword3" placeholder="Password"> 
+											</div> 
+										</div> 
+										<div class="form-group"> 
+											<div class="col-sm-offset-2 col-sm-10"> <div class="checkbox"> 
+												<label contenteditable="true"> 
+													<input type="checkbox"> Remember me </label> 
+												</div> 
+											</div> 
+										</div> 
+										<div class="form-group"> 
+											<div class="col-sm-offset-2 col-sm-10"> 
+												<button type="submit" class="btn btn-default" contenteditable="true">Sign in</button> 
+											</div> 
+										</div> 
+									</form>
 								</div>
 							</div>
 							<div class="ui-draggable compbox">
@@ -239,8 +284,11 @@
 									<img src="images/formgroup.png"></img>
 									<a href="#">Form Groups</a>
 								</div>
-								<div class="view">
-									<p>hhhhh</p>
+								<div class="view">	
+									<div class="form-group">
+											<label for="exampleInputEmail1" contenteditable="true">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+									</div>							
 								</div>
 							</div>
 							<div class="ui-draggable compbox">
@@ -251,18 +299,27 @@
 									<a href="#">Text Areas</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<textarea class="form-control" rows="3"></textarea>
 								</div>
 							</div>
 							<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<button class="btn btn-default btn-xs" id="multipleselects" type="submit">Multiple selects</button>
+								</span>
 								<div class="preview">
 									<img src="images/selectinput.png"></img>
 									<a href="#">Selects</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
 								</div>
 							</div>
 							<div class="ui-draggable compbox">

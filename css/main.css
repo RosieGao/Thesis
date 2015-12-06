@@ -180,9 +180,6 @@
 .column .preview{
 	display: none;
 }
-.column .compbox .view{
-    padding-top: 30px;
-}
 .column::before{ 
     background-color: #F5F5F5;
     border: 1px solid #DDDDDD;
@@ -210,23 +207,26 @@
 }
 .innerremove{ 
     position: absolute;
-    top: 0px;
+    top: -20px;
     right: 0px;
     z-index: 1;
     cursor: pointer;
 }
 .innerdraglabel{
 	position: absolute;
-	top: 0px;
+	top: -20px;
     right: 20px;
     z-index: 1;
     cursor: pointer;
 }
 .content .column .properties{
 	position: absolute;
-    top: 0px;
+    top: -20px;
     right: 45px;
     z-index: 1;
+}
+.content #formview2{
+	display: none;
 }
 .ui-draggable{
 	position: relative;

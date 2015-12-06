@@ -21,14 +21,51 @@ $(document).ready(function() {
 		$(this).parent().remove();
 	})
 	$(".content").on("click", "#stripedrows", function(e){
+		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-striped");
 	})
 	$(".content").on("click", "#borderedtables", function(e){
+		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-bordered");
 	})
 	$(".content").on("click", "#hoverrows", function(e){
+		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("table").toggleClass("table-hover");
 	})
+	$(".content").on("click", "#inlineform", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("form").toggleClass("form-inline");
+	})
+	$(".content").on("click", "#horizontalform", function(e){
+		e.preventDefault();
+		if($(this).attr("data-click-state") == 1) {
+			console.log("b");
+			$(this).attr("data-click-state", 0)
+			console.log($(this).closest(".compbox").find(".view").find("#formview2"));
+			$(this).closest(".compbox").find(".view").find("#formview2").css("display", "none");
+			$(this).closest(".compbox").find(".view").find("#formview1").css("display", "block");
+		} else {
+			console.log("a");
+			$(this).attr("data-click-state", 1)
+			$(this).closest(".compbox").find(".view").find("#formview1").css("display", "none");
+			$(this).closest(".compbox").find(".view").find("#formview2").css("display", "block");
+		}
+	})
+	$(".content").on("click", "#multipleselects", function(e){
+		e.preventDefault();
+		var thisselects = $(this).closest(".compbox").find(".view").find("select");
+		console.log(thisselects.attr("multiple"));
+		if (thisselects.attr("multiple")){
+			thisselects.removeAttr("multiple");
+		} else{
+			thisselects.attr("multiple", "multiple")
+		}
+	})
+
+	// $(".content").on("click", "#inlineform", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("form").toggleClass("form-inline");
+	// })
 	$(".content, .column").sortable({
 		connectWith: ".column",
 		opacity: 0.5,
