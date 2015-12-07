@@ -80,7 +80,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#selectsamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find("select").empty()
+		$(this).closest(".compbox").find(".view").find("select").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -155,7 +155,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#checkboxamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find("form").empty()
+		$(this).closest(".compbox").find(".view").find("form").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -171,7 +171,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#radiobuttonamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find("form").empty()
+		$(this).closest(".compbox").find(".view").find("form").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -200,7 +200,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#dropdownamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty()
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -210,7 +210,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#dropupamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty()
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -578,7 +578,7 @@ $(document).ready(function() {
 	});
 	$(".content").on("keyup", "#listgroupamount", function(e){
 		e.preventDefault();
-		$(this).closest(".compbox").find(".view").find(".list-group").empty()
+		$(this).closest(".compbox").find(".view").find(".list-group").empty();
 		var amount = +$(this).val();
 		var node = [];
 		for(var i = 0; i < amount; i++){
@@ -614,6 +614,13 @@ $(document).ready(function() {
 		e.preventDefault();
 		var node = "<a href=\"#\" class=\"list-group-item\"><h4 class=\"list-group-item-heading\" contenteditable=\"true\">List group item heading</h4><p class=\"list-group-item-text\" contenteditable=\"true\">List group content. List group content. List group content. List group content. List group content. List group content.</p></a>";
 		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("keyup", "#responsiveembedurl", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").empty();
+		var embedurl = $(this).val();
+		var node = "<iframe class=\"embed-responsive-item\" src=" + embedurl + " allowfullscreen=\"\"></iframe>";
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").append(node);
 	});
 	$(".content").on("click", "#16by9", function(e){
 		e.preventDefault();
