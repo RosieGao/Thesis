@@ -96,37 +96,56 @@ $(document).ready(function() {
 	$(".content").on("click", "#defaultbutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link");
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-default");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-default");
 	});
 	$(".content").on("click", "#primarybutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-primary");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-primary");
 	});	
 	$(".content").on("click", "#successbutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-success");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-success");
 	});	
 	$(".content").on("click", "#infobutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-info");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-info");
 	});	
 	$(".content").on("click", "#warningbutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-warning");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-warning");
 	});	
 	$(".content").on("click", "#dangerbutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-danger");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-danger");
 	});	
 	$(".content").on("click", "#linkbutton", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
-		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-link");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-link");
+	});
+	$(".content").on("click", "#largebutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-lg btn-sm btn-xs");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-lg");
+	});
+	$(".content").on("click", "#mediumbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-lg btn-sm btn-xs");
+	});
+	$(".content").on("click", "#smallbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-lg btn-sm btn-xs");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-sm");
+	});
+	$(".content").on("click", "#extrasmallbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-lg btn-sm btn-xs");
+		$(this).closest(".compbox").find(".view").find("button").addClass("btn-xs");
 	});
 	$(".content").on("click", "#checkboxdisabled", function(e){
 		e.preventDefault();
@@ -228,6 +247,25 @@ $(document).ready(function() {
 		}
 		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node.join(""));
 	});
+	$(".content").on("click", "#largebuttongroup", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").removeClass("btn-group-lg btn-group-sm btn-group-xs");
+		$(this).closest(".compbox").find(".view").find("#buttongroup").addClass("btn-group-lg");
+	});
+	$(".content").on("click", "#mediumbuttongroup", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").removeClass("btn-group-lg btn-group-sm btn-group-xs");
+	});
+	$(".content").on("click", "#smallbuttongroup", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").removeClass("btn-group-lg btn-group-sm btn-group-xs");
+		$(this).closest(".compbox").find(".view").find("#buttongroup").addClass("btn-group-sm");
+	});
+	$(".content").on("click", "#extrasmallbuttongroup", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").removeClass("btn-group-lg btn-group-sm btn-group-xs");
+		$(this).closest(".compbox").find(".view").find("#buttongroup").addClass("btn-group-xs");
+	});
 	$(".content").on("click", "#verticalgroup", function(e){
 		e.preventDefault();
 		var selector = $(this).closest(".compbox").find(".view").find("#buttongroup");
@@ -248,19 +286,71 @@ $(document).ready(function() {
 		var node = "<button type=\"button\" class=\"btn btn-default\" contenteditable=\"true\">Button group</button>";
 		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node);
 	});
-	$(".content").on("click", "#adddropdowns", function(e){
+	$(".content").on("click", "#groupadddropdowns", function(e){
 		e.preventDefault();
-		var node = "<div class=\"btn-group\" role=\"group\"><button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" contenteditable=\"true\">Dropdown<span class=\"caret\"></span></button><ul class=\"dropdown-menu\"><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li></ul></div>";
+		var node = "<div class=\"btn-group\" role=\"group\"><button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" contenteditable=\"true\">Dropdown <span class=\"caret\"></span></button><ul class=\"dropdown-menu\"><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li></ul></div>";
 		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node);
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
+	$(".content").on("keyup", "#tabnavamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").empty();
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<li role=\"presentation\"><a href=\"#\" contenteditable=\"true\">Tab nav</a></li>");
+		}
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").append(node.join(""));
+	});
+	$(".content").on("click", "#tabnavempty", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").empty();
+	});
+	$(".content").on("click", "#tabnavaddtabs", function(e){
+		e.preventDefault();
+		var node = "<li role=\"presentation\"><a href=\"#\" contenteditable=\"true\">Tab nav</a></li>";
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").append(node);
+	});
+	$(".content").on("click", "#tabnavadddropdowns", function(e){
+		e.preventDefault();
+		var node = "<li role=\"presentation\" class=\"dropdown\"><a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" contenteditable=\"true\">Dropdown <span class=\"caret\"></span></a><ul class=\"dropdown-menu\"><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li></ul></li>";
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").append(node);
+	});
+	$(".content").on("click", "#tabnavjustified", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-tabs").toggleClass("nav-justified");
+	});
+	$(".content").on("keyup", "#pillnavamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-pills").empty();
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<li role=\"presentation\"><a href=\"#\" contenteditable=\"true\">Pill nav</a></li>");
+		}
+		$(this).closest(".compbox").find(".view").find(".nav-pills").append(node.join(""));
+	});
+	$(".content").on("click", "#pillnavempty", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-pills").empty();
+	});
+	$(".content").on("click", "#pillnavaddtabs", function(e){
+		e.preventDefault();
+		var node = "<li role=\"presentation\"><a href=\"#\" contenteditable=\"true\">Pill nav</a></li>";
+		$(this).closest(".compbox").find(".view").find(".nav-pills").append(node);
+	});
+	$(".content").on("click", "#pillnavadddropdowns", function(e){
+		e.preventDefault();
+		var node = "<li role=\"presentation\" class=\"dropdown\"><a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" contenteditable=\"true\">Dropdown <span class=\"caret\"></span></a><ul class=\"dropdown-menu\"><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li></ul></li>";
+		$(this).closest(".compbox").find(".view").find(".nav-pills").append(node);
+	});
+	$(".content").on("click", "#pillnavstackable", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-pills").toggleClass("nav-stacked");
+	});
+	$(".content").on("click", "#pillnavjustified", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".nav-pills").toggleClass("nav-justified");
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");

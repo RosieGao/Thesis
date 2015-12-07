@@ -384,6 +384,17 @@
 											<li><a href="#" id="linkbutton">Link</a></li>
 										</ul>
 									</div>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Size <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 80px">
+											<li><a href="#" id="largebutton">Large</a></li>
+											<li><a href="#" id="mediumbutton">Medium</a></li>
+											<li><a href="#" id="smallbutton">Small</a></li>
+											<li><a href="#" id="extrasmallbutton">Extra small</a></li>
+										</ul>
+									</div>
 								</span>
 								<div class="preview">
 									<img src="images/button.png"></img>
@@ -602,10 +613,21 @@
 											<li><input type="text" style="width: 60px" id="buttongroupamount"></li>
 										</ul>
 									</div>
-									<button class="btn btn-default btn-xs" id="verticalgroup" type="submit">Vertical group</button>
-									<button class="btn btn-default btn-xs" id="emptygroup" type="submit">Empty group</button>
-									<button class="btn btn-default btn-xs" id="addgroupitems" type="submit">Add group items</button>
-									<button class="btn btn-default btn-xs" id="adddropdowns" type="submit">Add dropdowns</button>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Size <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 80px">
+											<li><a href="#" id="largebuttongroup">Large</a></li>
+											<li><a href="#" id="mediumbuttongroup">Medium</a></li>
+											<li><a href="#" id="smallbuttongroup">Small</a></li>
+											<li><a href="#" id="extrasmallbuttongroup">Extra small</a></li>
+										</ul>
+									</div>
+									<button class="btn btn-default btn-xs" id="verticalgroup" type="submit">Vertical</button>
+									<button class="btn btn-default btn-xs" id="emptygroup" type="submit">Empty</button>
+									<button class="btn btn-default btn-xs" id="addgroupitems" type="submit">Add items</button>
+									<button class="btn btn-default btn-xs" id="groupadddropdowns" type="submit">Add dropdowns</button>
 								</span>
 								<div class="preview">
 									<img src="images/wait.png"></img>						
@@ -622,12 +644,60 @@
 							<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Amount <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 60px; padding: 0 0">
+											<li><input type="text" style="width: 60px" id="tabnavamount"></li>
+										</ul>
+									</div>
+									<button class="btn btn-default btn-xs" id="tabnavempty" type="submit">Empty</button>
+									<button class="btn btn-default btn-xs" id="tabnavaddtabs" type="submit">Add tabs</button>
+									<button class="btn btn-default btn-xs" id="tabnavadddropdowns" type="submit">Add dropdowns</button>
+									<button class="btn btn-default btn-xs" id="tabnavjustified" type="submit">Justified</button>
+								</span>
 								<div class="preview">
 									<img src="images/nav.png"></img>								
-									<a href="#">Navs</a>
+									<a href="#">Tab Navs</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<ul class="nav nav-tabs">
+										<li role="presentation" class="active"><a href="#" contenteditable="true">Tab nav</a></li>
+										<li role="presentation"><a href="#" contenteditable="true">Tab nav</a></li>
+										<li role="presentation"><a href="#" contenteditable="true">Tab nav</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="ui-draggable compbox">
+								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
+								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Amount <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 60px; padding: 0 0">
+											<li><input type="text" style="width: 60px" id="pillnavamount"></li>
+										</ul>
+									</div>
+									<button class="btn btn-default btn-xs" id="pillnavempty" type="submit">Empty</button>
+									<button class="btn btn-default btn-xs" id="pillnavaddtabs" type="submit">Add tabs</button>
+									<button class="btn btn-default btn-xs" id="pillnavadddropdowns" type="submit">Add dropdowns</button>
+									<button class="btn btn-default btn-xs" id="pillnavstackable" type="submit">Stackable</button>
+									<button class="btn btn-default btn-xs" id="pillnavjustified" type="submit">Justified</button>
+								</span>
+								<div class="preview">
+									<img src="images/wait.png"></img>								
+									<a href="#">Pill Navs</a>
+								</div>
+								<div class="view">
+									<ul class="nav nav-pills">
+										<li role="presentation" class="active"><a href="#" contenteditable="true">Pill nav</a></li>
+										<li role="presentation"><a href="#" contenteditable="true">Pill nav</a></li>
+										<li role="presentation"><a href="#" contenteditable="true">Pill nav</a></li>
+									</ul>
 								</div>
 							</div>
 							<div class="ui-draggable compbox">

@@ -202,33 +202,33 @@
 	position: absolute;
     top: 7px;
     right: 10px;
-    z-index: 1;
+    z-index: 10;
 }
 .draglabel{
 	position: absolute;
     top: 7px;
     right: 30px;
-    z-index: 1;
+    z-index: 10;
 }
 .innerremove{ 
     position: absolute;
     top: -20px;
     right: 0px;
-    z-index: 1;
+    z-index: 10;
     cursor: pointer;
 }
 .innerdraglabel{
 	position: absolute;
 	top: -20px;
     right: 20px;
-    z-index: 1;
+    z-index: 10;
     cursor: pointer;
 }
 .content .column .properties{
 	position: absolute;
     top: -20px;
     right: 45px;
-    z-index: 1;
+    z-index: 10;
 }
 .content #formview2{
 	display: none;
