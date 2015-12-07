@@ -458,6 +458,90 @@ $(document).ready(function() {
 		$(this).closest(".compbox").find("#thumbnailsview3").css("display", "none");
 		$(this).closest(".compbox").find("#thumbnailsview4").css("display", "block");
 	});
+	$(".content").on("click", "#alertsuccess", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".alert-success").css("display", "block");
+		$(this).closest(".compbox").find(".view").find(".alert-info").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-warning").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-danger").css("display", "none");
+	});
+	$(".content").on("click", "#alertinfo", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".alert-success").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-info").css("display", "block");
+		$(this).closest(".compbox").find(".view").find(".alert-warning").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-danger").css("display", "none");
+	});
+	$(".content").on("click", "#alertwarning", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".alert-success").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-info").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-warning").css("display", "block");
+		$(this).closest(".compbox").find(".view").find(".alert-danger").css("display", "none");
+	});
+	$(".content").on("click", "#alertdanger", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".alert-success").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-info").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-warning").css("display", "none");
+		$(this).closest(".compbox").find(".view").find(".alert-danger").css("display", "block");
+	});
+	$(".content").on("click", "#dismissiblealerts", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".alert");
+		selector.toggleClass("alert-dismissible");
+		if (selector.hasClass("alert-dismissible")){
+			selector.prepend("<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>")
+		} else {
+			selector.find("button").remove();
+		}
+	});
+	$(".content").on("keyup", "#progresspercentage", function(e){
+		e.preventDefault();
+		var percentage = +$(this).val();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").attr("aria-valuenow", percentage);
+		$(this).closest(".compbox").find(".view").find(".progress-bar").css("width", percentage + "%");
+		$(this).closest(".compbox").find(".view").find(".progress-bar span").text(percentage + "% Complete");
+	});
+	$(".content").on("click", "#progresswithlabel", function(e){
+		e.preventDefault();
+		var percentage = $(this).closest(".compbox").find(".view").find(".progress-bar").attr("aria-valuenow");
+		if($(this).attr("data-click-state") == 1) {
+			$(this).attr("data-click-state", 0)
+			$(this).closest(".compbox").find(".view").find(".progress-bar").empty();
+		} else {
+			$(this).attr("data-click-state", 1);
+			$(this).closest(".compbox").find(".view").find(".progress-bar").append(percentage + "%");
+		}
+	});
+	$(".content").on("click", "#progresssuccess", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").removeClass("progress-bar-success progress-bar-info progress-bar-warning progress-bar-danger");
+		$(this).closest(".compbox").find(".view").find(".progress-bar").addClass("progress-bar-success");
+	});
+	$(".content").on("click", "#progressinfo", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").removeClass("progress-bar-success progress-bar-info progress-bar-warning progress-bar-danger");
+		$(this).closest(".compbox").find(".view").find(".progress-bar").addClass("progress-bar-info");
+	});
+	$(".content").on("click", "#progresswarning", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").removeClass("progress-bar-success progress-bar-info progress-bar-warning progress-bar-danger");
+		$(this).closest(".compbox").find(".view").find(".progress-bar").addClass("progress-bar-warning");
+	});
+	$(".content").on("click", "#progressdanger", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").removeClass("progress-bar-success progress-bar-info progress-bar-warning progress-bar-danger");
+		$(this).closest(".compbox").find(".view").find(".progress-bar").addClass("progress-bar-danger");
+	});
+	$(".content").on("click", "#progressstriped", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").toggleClass("progress-bar-striped");
+	});
+	$(".content").on("click", "#progressanimated", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".progress-bar").toggleClass("active");
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");

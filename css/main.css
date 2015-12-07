@@ -242,6 +242,15 @@
 .content #thumbnailsview4{
 	display: none;
 }
+.content .alert-success{
+	display: none;
+}
+.content .alert-info{
+	display: none;
+}
+.content .alert-danger{
+	display: none;
+}
 .ui-draggable{
 	position: relative;
 }
