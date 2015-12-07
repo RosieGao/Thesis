@@ -233,6 +233,15 @@
 .content #formview2{
 	display: none;
 }
+.content #thumbnailsview1{
+	display: none;
+}
+.content #thumbnailsview3{
+	display: none;
+}
+.content #thumbnailsview4{
+	display: none;
+}
 .ui-draggable{
 	position: relative;
 }

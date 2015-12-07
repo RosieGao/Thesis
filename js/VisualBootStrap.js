@@ -430,10 +430,34 @@ $(document).ready(function() {
 		$(this).closest(".compbox").find(".view").find(".pagination").removeClass("pagination-lg pagination-sm");
 		$(this).closest(".compbox").find(".view").find(".pagination").addClass("pagination-sm");
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
+	$(".content").on("click", "#thumbnail2", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find("#thumbnailsview1").css("display", "block");
+		$(this).closest(".compbox").find("#thumbnailsview2").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview3").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview4").css("display", "none");
+	});
+	$(".content").on("click", "#thumbnail3", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find("#thumbnailsview1").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview2").css("display", "block");
+		$(this).closest(".compbox").find("#thumbnailsview3").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview4").css("display", "none");
+	});
+	$(".content").on("click", "#thumbnail4", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find("#thumbnailsview1").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview2").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview3").css("display", "block");
+		$(this).closest(".compbox").find("#thumbnailsview4").css("display", "none");
+	});
+	$(".content").on("click", "#thumbnail6", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find("#thumbnailsview1").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview2").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview3").css("display", "none");
+		$(this).closest(".compbox").find("#thumbnailsview4").css("display", "block");
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
