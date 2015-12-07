@@ -25,9 +25,6 @@ $(document).ready(function() {
 	$(".mdButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("mdSize")});
 	$(".smButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("smSize")});
 	$(".xsButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("xsSize")});
-	$("#components .ui-draggable").draggable().bind('click', function(){
- 		 $(this).focus();
-	});
 	$("#clear").on("click", function(e){
 		e.preventDefault();
 		clearContent();
@@ -35,6 +32,25 @@ $(document).ready(function() {
 	$(".content").on("click", ".remove, .innerremove", function(e){
 		e.preventDefault();
 		$(this).parent().remove();
+	});
+	$(".content").on("keyup", "#gridcustomize", function(e){
+		$(this).closest(".gridbox").find(".row").empty();
+		var list = $(this).val().split(" ", 12);
+		var node = [];
+		var total = 0;
+		var listitem = 0;
+		console.log(list);
+		$.each(list, function(){
+			total += +$(this)[0];
+		});
+		if (total == 12){
+			$.each(list, function(){
+				listitem = +$(this)[0];
+				console.log("listitem");
+				node.push("<div class=\"column ui-sortable col-xs-" + listitem + " columndef" + listitem +"\"></div>");
+			});
+			$(this).closest(".gridbox").find(".row").append(node.join(""));
+		}
 	});
 	$(".content").on("click", "#stripedrows", function(e){
 		e.preventDefault();

@@ -80,6 +80,9 @@
 #gridSystem .draglabel{
 	display: none;
 } 
+#gridSystem .properties{
+	display: none;
+} 
 #components{
 	margin: 0;
     padding: 0;
@@ -223,6 +226,12 @@
     right: 20px;
     z-index: 10;
     cursor: pointer;
+}
+.content .gridbox .properties{
+	position: absolute;
+    top: 0px;
+    right: 55px;
+    z-index: 10;
 }
 .content .column .properties{
 	position: absolute;
