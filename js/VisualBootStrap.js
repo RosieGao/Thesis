@@ -179,6 +179,104 @@ $(document).ready(function() {
 		$(this).closest(".compbox").find(".view").find("#responsiveimage").removeClass("img-rounded img-circle img-thumbnail");
 		$(this).closest(".compbox").find(".view").find("#responsiveimage").toggleClass("img-thumbnail");
 	});
+	$(".content").on("keyup", "#dropdownamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty()
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<li><a href=\"#\" contenteditable=\"true\">Item</a></li>");
+		}
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").append(node.join(""));
+	});
+	$(".content").on("keyup", "#dropupamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty()
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<li><a href=\"#\" contenteditable=\"true\">Item</a></li>");
+		}
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").append(node.join(""));
+	});
+	$(".content").on("click", "#emptydropdown", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").empty();
+	});
+	$(".content").on("click", "#addheaders", function(e){
+		e.preventDefault();
+		var node = "<li class=\"dropdown-header\" contenteditable=\"true\">Dropdown header</li>";
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").append(node);
+	});
+	$(".content").on("click", "#additems", function(e){
+		e.preventDefault();
+		var node = "<li><a href=\"#\" contenteditable=\"true\">Item</a></li>";
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").append(node);
+	});
+	$(".content").on("click", "#adddividers", function(e){
+		e.preventDefault();
+		var node = "<li role=\"separator\" class=\"divider\"></li>";
+		$(this).closest(".compbox").find(".view").find(".dropdown-menu").append(node);
+	});
+	$(".content").on("keyup", "#buttongroupamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").empty();
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<button type=\"button\" class=\"btn btn-default\" contenteditable=\"true\">Button group</button>");
+		}
+		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node.join(""));
+	});
+	$(".content").on("click", "#verticalgroup", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find("#buttongroup");
+		if (selector.hasClass("btn-group")){
+			selector.removeClass("btn-group");
+			selector.addClass("btn-group-vertical");
+		} else {
+			selector.removeClass("btn-group-vertical");
+			selector.addClass("btn-group");
+		};
+	});
+	$(".content").on("click", "#emptygroup", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#buttongroup").empty();
+	});
+	$(".content").on("click", "#addgroupitems", function(e){
+		e.preventDefault();
+		var node = "<button type=\"button\" class=\"btn btn-default\" contenteditable=\"true\">Button group</button>";
+		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node);
+	});
+	$(".content").on("click", "#adddropdowns", function(e){
+		e.preventDefault();
+		var node = "<div class=\"btn-group\" role=\"group\"><button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" contenteditable=\"true\">Dropdown<span class=\"caret\"></span></button><ul class=\"dropdown-menu\"><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li><li><a href=\"#\" contenteditable=\"true\">Dropdown item</a></li></ul></div>";
+		$(this).closest(".compbox").find(".view").find("#buttongroup").append(node);
+	});
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
