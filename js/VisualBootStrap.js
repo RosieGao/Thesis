@@ -374,14 +374,62 @@ $(document).ready(function() {
 			selector.addClass("navbar-default");
 		};
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
+	$(".content").on("keyup", "#breadcrumbamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".breadcrumb").empty();
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount - 1; i++){
+			node.push("<li><a href=\"#\" contenteditable=\"true\">breadcrumb</a></li>");
+		}
+		node.push("<li class=\"active\" contenteditable=\"true\">breadcrumb</li>");
+		$(this).closest(".compbox").find(".view").find(".breadcrumb").append(node.join(""));
+	});
+	$(".content").on("click", "#breadcrumbempty", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".breadcrumb").empty();
+	});
+	$(".content").on("click", "#breadcrumbaddchild", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".breadcrumb");
+		if (selector.children().length > 0) {
+			var lastnode = selector.find("li:last-child");
+			var lastnodetext = lastnode.html();
+			lastnode.remove();
+			var newnode = [];
+			newnode.push("<li><a href=\"#\" contenteditable=\"true\">" + lastnodetext + "</a></li>");
+			newnode.push("<li class=\"active\" contenteditable=\"true\">breadcrumb</li>");
+			selector.append(newnode.join(""));	
+		} else {
+			selector.append("<li class=\"active\" contenteditable=\"true\">breadcrumb</li>");
+		} 
+	});
+	$(".content").on("keyup", "#paginationamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".pagination").empty();
+		var amount = +$(this).val();
+		var node = [];
+		node.push("<li><a href=\"#\" aria-label=\"Previous\"><span aria-hidden=\"true\">&laquo;</span></a></li>");
+		for(var i = 0; i < amount; i++){
+			node.push("<li><a href=\"#\">" + (i + 1) + "</a></li>");
+		}
+		node.push("<li><a href=\"#\" aria-label=\"Next\"><span aria-hidden=\"true\">&raquo;</span></a></li>");
+		$(this).closest(".compbox").find(".view").find(".pagination").append(node.join(""));
+	});
+	$(".content").on("click", "#paginationlarge", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".pagination").removeClass("pagination-lg pagination-sm");
+		$(this).closest(".compbox").find(".view").find(".pagination").addClass("pagination-lg");
+	});
+	$(".content").on("click", "#paginationmedium", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".pagination").removeClass("pagination-lg pagination-sm");
+	});
+	$(".content").on("click", "#paginationsmall", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".pagination").removeClass("pagination-lg pagination-sm");
+		$(this).closest(".compbox").find(".view").find(".pagination").addClass("pagination-sm");
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
