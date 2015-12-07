@@ -8,6 +8,15 @@ function toggleClick(selector, attr, value){
 		selector.attr(attr, value);
 	}
 }
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $(".compbox .view #responsiveimage").attr("src", e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 $(document).ready(function() {
 	$(".sideWrapper").css("height", ((($(window).height() - 95) / $(window).height()) * 100) + "%");
 	$(".content").css("min-height", $(window).height() - 95);
@@ -84,6 +93,41 @@ $(document).ready(function() {
 		var selector = $(this).closest(".compbox").find(".view").find("select");
 		toggleClick(selector, "multiple", "multiple");
 	});
+	$(".content").on("click", "#defaultbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link");
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-default");
+	});
+	$(".content").on("click", "#primarybutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-primary");
+	});	
+	$(".content").on("click", "#successbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-success");
+	});	
+	$(".content").on("click", "#infobutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-info");
+	});	
+	$(".content").on("click", "#warningbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-warning");
+	});	
+	$(".content").on("click", "#dangerbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-danger");
+	});	
+	$(".content").on("click", "#linkbutton", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("button").removeClass("btn-default btn-primary btn-success btn-info btn-warnin btn-danger btn-link")
+		$(this).closest(".compbox").find(".view").find("button").toggleClass("btn-link");
+	});
 	$(".content").on("click", "#checkboxdisabled", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find(".checkbox").toggleClass("disabled");
@@ -116,10 +160,25 @@ $(document).ready(function() {
 		}
 		$(this).closest(".compbox").find(".view").find("form").append(node.join(""));
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
+	$(".content").on("click", "#imagedefault", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").removeClass("img-rounded img-circle img-thumbnail");
+	});
+	$(".content").on("click", "#imagerounded", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").removeClass("img-rounded img-circle img-thumbnail");
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").toggleClass("img-rounded");
+	});
+	$(".content").on("click", "#imagecircle", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").removeClass("img-rounded img-circle img-thumbnail");
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").toggleClass("img-circle");
+	});
+	$(".content").on("click", "#imagethumbnail", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").removeClass("img-rounded img-circle img-thumbnail");
+		$(this).closest(".compbox").find(".view").find("#responsiveimage").toggleClass("img-thumbnail");
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");

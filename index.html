@@ -369,12 +369,28 @@
 							<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Options <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 80px">
+											<li><a href="#" id="defaultbutton">Default</a></li>
+											<li><a href="#" id="primarybutton">Primary</a></li>
+											<li><a href="#" id="successbutton">Success</a></li>
+											<li><a href="#" id="infobutton">Info</a></li>
+											<li><a href="#" id="warningbutton">Warning</a></li>
+											<li><a href="#" id="dangerbutton">Danger</a></li>
+											<li><a href="#" id="linkbutton">Link</a></li>
+										</ul>
+									</div>
+								</span>
 								<div class="preview">
 									<img src="images/button.png"></img>
 									<a href="#">Buttons</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<button type="button" class="btn btn-default" contenteditable="true">Default</button>
 								</div>
 							</div>
 							<div class="ui-draggable compbox">
@@ -482,12 +498,26 @@
 							<div class="ui-draggable compbox">
 								<span href="#close" class="innerremove"><i class="fa fa-times"></i></span>
 								<span class="innerdraglabel"><i class="fa fa-arrows"></i></span>
+								<span class="properties">
+									<form style="display: inline-block"><input type="file" id="imageupload" onchange="readURL(this);"/></form>
+									<div class="btn-group" style="display: inline-block">
+										<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Shape <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" style="min-width: 80px">
+											<li><a href="#" id="imagedefault">Default</a></li>
+											<li><a href="#" id="imagerounded">Rounded</a></li>
+											<li><a href="#" id="imagecircle">Circle</a></li>
+											<li><a href="#" id="imagethumbnail">Thumbnail</a></li>
+										</ul>
+									</div>
+								</span>
 								<div class="preview">
 									<i class="fa fa-picture-o fa-5x"></i>	
 									<a href="#">Images</a>
 								</div>
 								<div class="view">
-									<p>hhhhh</p>
+									<img id="responsiveimage" src="images/responsiveimage1.png" class="img-responsive" alt="Responsive image">
 								</div>
 							</div>
 							<div class="ui-draggable compbox">
