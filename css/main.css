@@ -50,6 +50,10 @@
     padding: 0;
     overflow: hidden;
 }
+#gridSystem .gridbox{
+	display: inline-block;
+    width: 49%;
+}
 #gridSystem .preview{
 	cursor: pointer;
 	width: 120px;
@@ -58,8 +62,6 @@
     text-align: center;
 	background-repeat: no-repeat;
 	padding: 10px 20px 10px;
-	opacity: 0.85;
-	float: left;
 	overflow: hidden;
 }
 #gridSystem .preview a{
@@ -83,6 +85,10 @@
     padding: 0;
     overflow: hidden;
 }
+#components .compbox{
+	display: inline-block;
+    width: 49%;
+}
 #components .preview{
 	cursor: pointer;
 	width: 120px;
@@ -91,7 +97,6 @@
     text-align: center;
 	background-repeat: no-repeat;
 	padding: 10px 20px 10px;
-	float: left;
 	overflow: hidden;
 }
 #components .preview a{
@@ -266,4 +271,10 @@
 }
 .columndef12{
 	width: 100%;
+}
+#focusedInput {
+    border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted\9;
+    box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
