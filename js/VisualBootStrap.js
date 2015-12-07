@@ -351,10 +351,29 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find(".nav-pills").toggleClass("nav-justified");
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
+	$(".content").on("click", "#fixedtotop", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".navbar").toggleClass("navbar-fixed-top");
+	});
+	$(".content").on("click", "#fixedtobottom", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".navbar").toggleClass("navbar-fixed-bottom");
+	});
+	$(".content").on("click", "#statictop", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".navbar").toggleClass("navbar-static-top");
+	});
+	$(".content").on("click", "#invertednavbar", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".navbar");
+		if (selector.hasClass("navbar-default")){
+			selector.removeClass("navbar-default");
+			selector.addClass("navbar-inverse");
+		} else {
+			selector.removeClass("navbar-inverse");
+			selector.addClass("navbar-default");
+		};
+	});
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
