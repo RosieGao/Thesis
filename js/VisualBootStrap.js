@@ -615,6 +615,82 @@ $(document).ready(function() {
 		var node = "<a href=\"#\" class=\"list-group-item\"><h4 class=\"list-group-item-heading\" contenteditable=\"true\">List group item heading</h4><p class=\"list-group-item-text\" contenteditable=\"true\">List group content. List group content. List group content. List group content. List group content. List group content.</p></a>";
 		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
 	});
+	$(".content").on("click", "#panelwithheading", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		if (selector.find(".panel-heading").length > 0){
+			selector.find(".panel-heading").remove();
+		} else {
+			var node = "<div class=\"panel-heading\"><h3 class=\"panel-title\" contenteditable=\"true\">Panel title</h3></div>";
+			selector.prepend(node);
+		}
+	});
+	$(".content").on("click", "#panelwithfooter", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		if (selector.find(".panel-footer").length > 0){
+			selector.find(".panel-footer").remove();
+		} else {
+			var node = "<div class=\"panel-footer\" contenteditable=\"true\">Panel footer</div>";
+			selector.append(node);
+		}
+	});
+	$(".content").on("click", "#paneldefault", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-default");		
+	});
+	$(".content").on("click", "#panelprimary", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-primary");	
+	});
+	$(".content").on("click", "#panelsuccess", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-success");	
+	});
+	$(".content").on("click", "#panelinfo", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-info");	
+	});
+	$(".content").on("click", "#panelwarning", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-warning");	
+	});
+	$(".content").on("click", "#paneldanger", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		selector.removeClass("panel-default panel-primary panel-success panel-info panel-warning panel-danger");
+		selector.addClass("panel-danger");	
+	});
+	$(".content").on("click", "#panelwithtable", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		var node = "<table class=\"table\" contenteditable=\"true\"><caption>Optional table caption.</caption><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope=\"row\">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope=\"row\">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope=\"row\">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table>";
+		if (selector.find(".panel-footer").length > 0){
+			$(node).insertBefore(selector.find(".panel-footer"));
+		} else {
+			selector.append(node);
+		};
+	});
+	$(".content").on("click", "#panelwithlistgroup", function(e){
+		e.preventDefault();
+		var selector = $(this).closest(".compbox").find(".view").find(".panel");
+		var node = "<div class=\"list-group\"><li class=\"list-group-item\" contenteditable=\"true\">List group item</li><li class=\"list-group-item\" contenteditable=\"true\">List group item</li><li class=\"list-group-item\" contenteditable=\"true\">List group item</li></div>";
+		if (selector.find(".panel-footer").length > 0){
+			$(node).insertBefore(selector.find(".panel-footer"));
+		} else {
+			selector.append(node);
+		};
+	});
 	$(".content").on("keyup", "#responsiveembedurl", function(e){
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find(".embed-responsive").empty();
@@ -632,38 +708,6 @@ $(document).ready(function() {
 		$(this).closest(".compbox").find(".view").find(".embed-responsive").removeClass("embed-responsive-16by9 embed-responsive-4by3");
 		$(this).closest(".compbox").find(".view").find(".embed-responsive").addClass("embed-responsive-4by3");
 	});
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
-	// $(".content").on("click", "#a", function(e){
-		// e.preventDefault();
-	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
-	// });
 	$(".content, .column").sortable({
 		connectWith: ".column",
 		opacity: 0.5,
