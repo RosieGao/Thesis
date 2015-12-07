@@ -542,6 +542,109 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find(".progress-bar").toggleClass("active");
 	});
+	$(".content").on("click", "#mediaobjectleft", function(e){
+		e.preventDefault();
+		if ($(this).closest(".compbox").find(".view").find(".media .media-left").length > 0){
+			return false;
+		} else {
+			var mediaobject = $(this).closest(".compbox").find(".view").find(".media .media-right").html();
+			$(this).closest(".compbox").find(".view").find(".media .media-right").remove();
+			$(this).closest(".compbox").find(".view").find(".media").prepend("<div class=\"media-left\">" + mediaobject + "</div>");
+		}
+	});
+	$(".content").on("click", "#mediaobjectright", function(e){
+		e.preventDefault();
+		if ($(this).closest(".compbox").find(".view").find(".media .media-right").length > 0){
+			return false;
+		} else {
+			var mediaobject = $(this).closest(".compbox").find(".view").find(".media .media-left").html();
+			$(this).closest(".compbox").find(".view").find(".media .media-left").remove();
+			$(this).closest(".compbox").find(".view").find(".media").append("<div class=\"media-right\">" + mediaobject + "</div>");
+		}
+	});
+	$(".content").on("click", "#mediaobjecttop", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".media-left, .media-right").removeClass("media-middle media-bottom");
+	});
+	$(".content").on("click", "#mediaobjectmiddle", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".media-left, .media-right").removeClass("media-middle media-bottom");
+		$(this).closest(".compbox").find(".view").find(".media-left, .media-right").addClass("media-middle");
+	});
+	$(".content").on("click", "#mediaobjectbottom", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".media-left, .media-right").removeClass("media-middle media-bottom");
+		$(this).closest(".compbox").find(".view").find(".media-left, .media-right").addClass("media-bottom");
+	});
+	$(".content").on("keyup", "#listgroupamount", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".list-group").empty()
+		var amount = +$(this).val();
+		var node = [];
+		for(var i = 0; i < amount; i++){
+			node.push("<li class=\"list-group-item\" contenteditable=\"true\">List group item</li>");
+		}
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node.join(""));
+	});
+	$(".content").on("click", "#listgroupempty", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".list-group").empty();
+	});
+	$(".content").on("click", "#listgroupadditem", function(e){
+		e.preventDefault();
+		var node = "<li class=\"list-group-item\" contenteditable=\"true\">List group item</li>";
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("click", "#listgroupaddlinked", function(e){
+		e.preventDefault();
+		var node = "<a href=\"#\" class=\"list-group-item\" contenteditable=\"true\">Linked item</a>";
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("click", "#listgroupaddbutton", function(e){
+		e.preventDefault();
+		var node = "<button type=\"button\" class=\"list-group-item\" contenteditable=\"true\">Button item</button>";
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("click", "#listgroupadddisabled", function(e){
+		e.preventDefault();
+		var node = "<a href=\"#\" class=\"list-group-item disabled\" contenteditable=\"true\">Disabled item</a>";
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("click", "#listgroupaddcontent", function(e){
+		e.preventDefault();
+		var node = "<a href=\"#\" class=\"list-group-item\"><h4 class=\"list-group-item-heading\" contenteditable=\"true\">List group item heading</h4><p class=\"list-group-item-text\" contenteditable=\"true\">List group content. List group content. List group content. List group content. List group content. List group content.</p></a>";
+		$(this).closest(".compbox").find(".view").find(".list-group").append(node);
+	});
+	$(".content").on("click", "#16by9", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").removeClass("embed-responsive-16by9 embed-responsive-4by3");
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").addClass("embed-responsive-16by9");
+	});
+	$(".content").on("click", "#4by3", function(e){
+		e.preventDefault();
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").removeClass("embed-responsive-16by9 embed-responsive-4by3");
+		$(this).closest(".compbox").find(".view").find(".embed-responsive").addClass("embed-responsive-4by3");
+	});
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
+	// $(".content").on("click", "#a", function(e){
+		// e.preventDefault();
+	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
+	// });
 	// $(".content").on("click", "#a", function(e){
 		// e.preventDefault();
 	// 	$(this).closest(".compbox").find(".view").find("a").toggleClass("a");
