@@ -17,7 +17,56 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+function initialContainer(){
+	$(".content, .column").sortable({
+		connectWith: ".column",
+		opacity: 0.5,
+		handle: ".innerdraglabel, .draglabel",
+		start: function(event, ui) {
+		},
+		stop: function(event, ui) {
+		}
+	});
+}
 $(document).ready(function() {
+	initialContainer();
+	$("#gridSystem .ui-draggable").draggable({
+		connectToSortable: ".content",
+		helper: "clone",
+		scroll: false,
+		handle: ".preview",
+		start: function(event, ui) {
+		},
+		drag: function(event, ui) {
+			ui.helper.width("100%")
+		},
+		stop: function(event, ui) {
+			ui.helper.removeAttr("style");
+			$(".content .column").sortable({
+				opacity: 0.5,
+				connectWith: ".column",
+				handle: ".innerdraglabel, .draglabel",
+				start: function(event, ui) {
+				},
+				stop: function(event, ui) {
+				}
+			});
+		}
+	});
+	$("#components .ui-draggable").draggable({
+		connectToSortable: ".column",
+		helper: "clone",
+		scroll: false,
+		handle: ".preview",
+		start: function(event, ui) {
+		},
+		drag: function(event, ui) {
+			ui.helper.width("100%");
+		},
+		stop: function(event, ui) {
+			ui.helper.removeAttr("style");
+		}
+	});
 	$(".sideWrapper").css("height", ((($(window).height() - 95) / $(window).height()) * 100) + "%");
 	$(".content").css("min-height", $(window).height() - 95);
 	$(".fullScreen").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize")});
@@ -25,6 +74,22 @@ $(document).ready(function() {
 	$(".mdButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("mdSize")});
 	$(".smButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("smSize")});
 	$(".xsButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("xsSize")});
+
+
+	$("#pagedesign").on("click", function(e){
+		e.preventDefault();
+		$("body").removeClass("designlayout previewlayout");
+		$("body").addClass("designlayout");
+	});
+
+	$("#pagepreview").on("click", function(e){
+		e.preventDefault();
+		$("body").removeClass("designlayout previewlayout");
+		$("body").addClass("previewlayout");
+	});
+
+
+
 	$("#clear").on("click", function(e){
 		e.preventDefault();
 		clearContent();
@@ -34,22 +99,22 @@ $(document).ready(function() {
 		$(this).parent().remove();
 	});
 	$(".content").on("keyup", "#gridcustomize", function(e){
+		e.preventDefault();
 		$(this).closest(".gridbox").find(".row").empty();
 		var list = $(this).val().split(" ", 12);
 		var node = [];
 		var total = 0;
 		var listitem = 0;
-		console.log(list);
 		$.each(list, function(){
 			total += +$(this)[0];
 		});
 		if (total == 12){
 			$.each(list, function(){
 				listitem = +$(this)[0];
-				console.log("listitem");
 				node.push("<div class=\"column ui-sortable col-xs-" + listitem + " columndef" + listitem +"\"></div>");
 			});
 			$(this).closest(".gridbox").find(".row").append(node.join(""));
+			initialContainer();
 		}
 	});
 	$(".content").on("click", "#stripedrows", function(e){
@@ -723,51 +788,5 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest(".compbox").find(".view").find(".embed-responsive").removeClass("embed-responsive-16by9 embed-responsive-4by3");
 		$(this).closest(".compbox").find(".view").find(".embed-responsive").addClass("embed-responsive-4by3");
-	});
-	$(".content, .column").sortable({
-		connectWith: ".column",
-		opacity: 0.5,
-		handle: ".innerdraglabel, .draglabel",
-		start: function(event, ui) {
-		},
-		stop: function(event, ui) {
-		}
-	});
-	$("#gridSystem .ui-draggable").draggable({
-		connectToSortable: ".content",
-		helper: "clone",
-		scroll: false,
-		handle: ".preview",
-		start: function(event, ui) {
-		},
-		drag: function(event, ui) {
-			ui.helper.width("100%")
-		},
-		stop: function(event, ui) {
-			ui.helper.removeAttr("style");
-			$(".content .column").sortable({
-				opacity: 0.5,
-				connectWith: ".column",
-				handle: ".innerdraglabel, .draglabel",
-				start: function(event, ui) {
-				},
-				stop: function(event, ui) {
-				}
-			});
-		}
-	});
-	$("#components .ui-draggable").draggable({
-		connectToSortable: ".column",
-		helper: "clone",
-		scroll: false,
-		handle: ".preview",
-		start: function(event, ui) {
-		},
-		drag: function(event, ui) {
-			ui.helper.width("100%");
-		},
-		stop: function(event, ui) {
-			ui.helper.removeAttr("style");
-		}
 	});
 })
