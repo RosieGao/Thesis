@@ -74,22 +74,16 @@ $(document).ready(function() {
 	$(".mdButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("mdSize")});
 	$(".smButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("smSize")});
 	$(".xsButton").on("click", function(){$(".content").removeClass("lgSize mdSize smSize xsSize"); $(".content").addClass("xsSize")});
-
-
 	$("#pagedesign").on("click", function(e){
 		e.preventDefault();
 		$("body").removeClass("designlayout previewlayout");
 		$("body").addClass("designlayout");
 	});
-
 	$("#pagepreview").on("click", function(e){
 		e.preventDefault();
 		$("body").removeClass("designlayout previewlayout");
 		$("body").addClass("previewlayout");
 	});
-
-
-
 	$("#clear").on("click", function(e){
 		e.preventDefault();
 		clearContent();
@@ -102,16 +96,17 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest(".gridbox").find(".row").empty();
 		var list = $(this).val().split(" ", 12);
+		console.log(list);
 		var node = [];
 		var total = 0;
 		var listitem = 0;
-		$.each(list, function(){
-			total += +$(this)[0];
+		$.each(list, function(list, item){
+			total += parseInt(item);
+			console.log(total);
 		});
 		if (total == 12){
-			$.each(list, function(){
-				listitem = +$(this)[0];
-				node.push("<div class=\"column ui-sortable col-xs-" + listitem + " columndef" + listitem +"\"></div>");
+			$.each(list, function(list, item){
+				node.push("<div class=\"column ui-sortable col-xs-" + parseInt(item) + " columndef" + parseInt(item) +"\"></div>");
 			});
 			$(this).closest(".gridbox").find(".row").append(node.join(""));
 			initialContainer();
